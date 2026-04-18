@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -12,6 +15,10 @@ body {
   line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
 
 header {
   background: linear-gradient(135deg, #183153, #245a97);
@@ -71,14 +78,14 @@ nav a:hover {
   background-color: rgba(255, 255, 255, 0.18);
 }
 
-
 main {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-.post {
+.post,
+.sobre-mi {
   background-color: white;
   border-radius: 10px;
   padding: 30px;
@@ -103,59 +110,21 @@ h2 {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-
-footer {
-  background-color: #183153;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+  color: #183153;
 }
 
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .logo-portafolio {
-    flex-direction: column;
-  }
-
-  nav {
-    justify-content: center;
-  }
+h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #183153;
 }
 
-@media (max-width: 480px) {
-  nav {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  nav a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .logo-portafolio h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-}   
-
-  html {
-  scroll-behavior: smooth;
-}
-
-img {
-  max-width: 100%;
-  display: block;
+h5,
+h6 {
+  color: #183153;
 }
 
 .hero {
@@ -182,6 +151,10 @@ img {
   margin-bottom: 35px;
 }
 
+.titulo-seccion p {
+  color: #64748b;
+}
+
 .etiqueta-commit {
   display: inline-block;
   border: 1px dashed #d97706;
@@ -191,27 +164,6 @@ img {
   border-radius: 8px;
   font-size: 0.85rem;
   margin-bottom: 12px;
-}
-
-h3 {
-  font-size: 1.3rem;
-  margin-bottom: 14px;
-  color: #183153;
-}
-
-h4 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #183153;
-}
-
-h5,
-h6 {
-  color: #183153;
-}
-
-.titulo-seccion p {
-  color: #64748b;
 }
 
 .sobre-mi-contenido {
@@ -407,6 +359,14 @@ button:hover {
   background-color: #183153;
 }
 
+footer {
+  background-color: #183153;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
 .footer-contenido {
   max-width: 900px;
   margin: 0 auto;
@@ -423,4 +383,76 @@ footer a:hover {
 
 footer span {
   margin: 0 8px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo-portafolio {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-mi-contenido,
+  .contacto-grid {
+    flex-direction: column;
+  }
+
+  .habilidades-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proyectos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0 14px;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo-portafolio h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .post,
+  .sobre-mi {
+    padding: 22px 18px;
+  }
+
+  .hero-foto img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
 }
