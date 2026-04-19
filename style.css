@@ -437,6 +437,35 @@ footer span {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+  .titulo-seccion {
+    margin-bottom: 25px;
+  }
+
+  .card-proyecto {
+    padding: 16px;
+  }
+
+  .info-contacto,
+  .datos-personales,
+  .formulario-contacto,
+  .sobre-mi-texto {
+    width: 100%;
+  }
+
+  .hero-foto img {
+    width: 190px;
+    height: 190px;
+  }
+
+  table {
+    font-size: 0.95rem;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
 
 @media (max-width: 480px) {
   main {
@@ -475,3 +504,33 @@ footer span {
     grid-template-columns: 1fr;
   }
 }
+  .card-proyecto img {
+    height: 160px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .titulo-seccion p {
+    font-size: 0.95rem;
+  }
+
+  .etiqueta-commit {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  .info-contacto,
+  .datos-personales {
+    padding: 18px;
+  }
